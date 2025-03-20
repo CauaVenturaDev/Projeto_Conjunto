@@ -1,6 +1,58 @@
-@use 'src/main' as *;
+@use "src/main" as *;
 
-body {
-    background-color: $cor1;
-    color: white;
+* {
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.painel {
+    .painel__Registro,
+    .painel__Login {
+        display: grid;
+        grid-template-areas:
+            "userInfos userName"
+            "userInfos password"
+            "userInfos btnRegistro";
+
+        padding: 10px;
+        background-color: $painelColor;
+        margin: 0 auto;
+        width: 80%;
+        border-radius: 20px;
+
+        #userInfos {
+            grid-area: userInfos;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #username {
+            grid-area: userName;
+        }
+
+        #password {
+            grid-area: password;
+        }
+
+        #username,
+        #password,
+        #btnRegistro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid $painelColor;
+            margin: 5px auto;
+            width: 70%;
+        }
+    }
+
+    .painel__Login {
+        display: none;
+    }
 }

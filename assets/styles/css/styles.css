@@ -1,6 +1,52 @@
-body {
+* {
   background-color: #212121;
-  color: white;
+  color: #ffffff;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.painel .painel__Registro,
+.painel .painel__Login {
+  display: grid;
+  grid-template-areas: "userInfos userName" "userInfos password" "userInfos btnRegistro";
+  padding: 10px;
+  background-color: #505050;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 20px;
+}
+.painel .painel__Registro #userInfos,
+.painel .painel__Login #userInfos {
+  grid-area: userInfos;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.painel .painel__Registro #username,
+.painel .painel__Login #username {
+  grid-area: userName;
+}
+.painel .painel__Registro #password,
+.painel .painel__Login #password {
+  grid-area: password;
+}
+.painel .painel__Registro #username,
+.painel .painel__Registro #password,
+.painel .painel__Registro #btnRegistro,
+.painel .painel__Login #username,
+.painel .painel__Login #password,
+.painel .painel__Login #btnRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #505050;
+  margin: 5px auto;
+  width: 70%;
+}
+.painel .painel__Login {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
